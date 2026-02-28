@@ -1,0 +1,22 @@
+/* Contenedor principal donde se colocan las imágenes */
+#result-section {
+    display: flex;               /* Utiliza Flexbox */
+    flex-wrap: wrap;             /* Permite que los elementos se envuelvan cuando no quepan */
+    justify-content: center;     /* Centra los elementos horizontalmente */
+    gap: 20px;                   /* Espacio entre los elementos */
+}
+
+/* Cada item de la galería */
+.gallery-item {
+    width: calc(50% - 20px);     /* Calcula el ancho para que quepan 2 elementos por fila */
+    margin-bottom: 20px;         /* Espacio debajo de cada imagen */
+    text-align: center;          /* Centra el texto */
+}
+
+/* Asegurarse de que las imágenes tengan el mismo tamaño y no se distorsionen */
+.gallery-item img {
+    width: 100%;                 /* La imagen ocupará el 100% del contenedor */
+    height: 300px;               /* Altura fija para que todas tengan el mismo tamaño */
+    object-fit: cover;           /* Hace que la imagen cubra completamente el área sin distorsionarse */
+    border-radius: 8px;          /* Opcional: bordes redondeados para las imágenes */
+}
